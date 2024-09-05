@@ -5,6 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Oréal Paris - Contact Us</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Inline styles to center the form and improve appearance */
+        #contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh; /* Adjust the height to fill the page */
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px; /* Maximum width of the form */
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,8 +65,9 @@
 
     <main>
         <section id="contact">
-            <h2>Contact Us</h2>
             <form action="https://formspree.io/your-email" method="POST">
+                <h2>Contact Us</h2>
+
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -32,13 +79,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit">Submit</button>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
+
+                <button type="submit">Submit</button>
             </form>
         </section>
     </main>
